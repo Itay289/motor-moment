@@ -1,0 +1,13 @@
+<div class='commentCreate'>
+  <h3>Send Us a Message</h3>
+  <%= simple_form_for :contact_form, url: messages_path, method: :post do |f| %>
+    <%= f.error_notification %>
+
+      <%= f.input :name %>
+      <%= f.input :email, label: 'Email address' %>
+      <%= f.input :message_title, label: 'Title' %>
+      <%= f.input :message_body, label: 'Your message', as: :text %>
+
+      <%= f.submit 'Submit', class: 'submit' %>
+  <%end%>    
+</div>

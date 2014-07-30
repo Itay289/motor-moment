@@ -1,0 +1,13 @@
+<h1>Writer Page</h1>
+<h2><%= @user.email %></h2>
+<p> Articles: <%= @user.posts.count %></p>
+  <% @user.posts.each do |post| %>
+    <div class = "post" >
+      <p> <%= post.title %> </p>
+      <p> <%= post.comments.count %> comments </p>
+      <div class="image" data-url="<%= post_path(post) %>" >
+        <p> <%= image_tag(post.image_url) if post.image? %></p>
+      </div>
+    </div>
+  <% end %>
+

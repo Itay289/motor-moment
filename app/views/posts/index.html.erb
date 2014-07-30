@@ -1,0 +1,19 @@
+
+<h1 style="text-shadow: 2px 2px #A0A0A0;">Top News</h1>
+<div class="form">
+  <p><%= link_to 'WRITE A NEW POST', new_post_path%></p>
+  <% @posts.each do |post| %>
+    <div class="post" >
+      <p style="font-size: 20px;"> <%= post.title %> </p>  
+      <p> Posted by: <%= link_to post.user.email, user_path(post.user_id) %> </p>
+      <p> <%= post.comments.count %> comments </p>
+      <div class="image" data-url="<%= post_path(post) %>" >
+        <p> <%= image_tag(post.image_url) if post.image? %></p>  
+      </div>
+    </div>
+  <% end %>
+</div>
+
+
+
+

@@ -1,0 +1,7 @@
+<h1>Your post has been updated</h1>
+<div>
+  <p><%= @post.title%></p>
+  <p><%= @post.post%></p>
+   <p> Posted by: <%= @post.user.email %> </p>
+   <p> <%= image_tag(@post.image_url) if @post.image? %></p>
+</div>

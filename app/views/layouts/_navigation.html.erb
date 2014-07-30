@@ -1,0 +1,25 @@
+<%# navigation styled for Zurb Foundation 5 %>
+<nav class="top-bar" data-topbar>
+  <ul class="title-area">
+    <li class="name"><%= link_to 'Home', root_path %></li>
+    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+  <div class="top-bar-section">
+    <ul>
+      <%= render 'layouts/navigation_links' %>
+    </ul>
+  </div>
+  <div id="user_nav">
+  <% if user_signed_in? %>
+     Signed in as <%= current_user.email %>. Not you?
+    <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %> 
+    <% else %>
+      <%= link_to 'Sign up', new_user_registration_path %> or <%= link_to 'sign in', new_user_session_path %> 
+  <% end %>
+</div>
+
+<% flash.each do |name, msg| %>
+<%= content_tag :div, msg, :id => 'flash_#{name}' %>
+<% end %>
+
+</nav>

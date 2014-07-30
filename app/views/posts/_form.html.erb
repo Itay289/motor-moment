@@ -1,0 +1,12 @@
+<div class="commentCreate" >
+  <%= simple_form_for @post, :html => {:multipart => true} do |form| %>
+    <%= form.error_notification %>
+    <%= form.input :name, autofocus: true %>
+    <%= form.input :title %>
+    <%= form.input :post, as: :text %>
+    <%= form.button :submit, 'Submit', class: 'submit' %>
+    <p>
+      <%= form.file_field :image %>
+    </p>
+  <% end %>
+</div>  

@@ -1,0 +1,72 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post {
+  display: inline-block;
+  width: 260px;
+  height: auto;
+  background-color: #E0E0E0;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  margin-right: 10px;
+  margin-left: 50px;
+  border: 2px solid #989898;
+  font-family: 'Open Sans', sans-serif;
+  border-radius: 10px;
+}
+
+.header {
+  display: block;
+  background-color: white;
+  text-align: center;
+  text-shadow: 2px 2px #A0A0A0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.commentShow {
+  border-bottom-style: ridge;
+  margin-top: 5px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.image:hover {
+  opacity: .7;
+    -webkit-transform: scale(1.05,1.07);
+    -webkit-transition-timing-function: ease-out;
+    -webkit-transition-duration: 250ms;
+    -moz-transform: scale(1.05,1.07);
+    -moz-transition-timing-function: ease-out;
+    -moz-transition-duration: 250ms;
+    position: relative;
+    z-index: 99;
+    cursor: pointer;
+}
+
+.myPost {
+  display: inline-block;
+  width: 80%;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.topNews {
+  width: auto;
+  margin-left: 100px;
+  margin-right: 100px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.WriterPage {
+  display: inline-block;
+  border: 2px solid #989898;
+  margin-top: 40px;
+  width: 60%;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+.commentCreate {
+  width: 60%;
+}

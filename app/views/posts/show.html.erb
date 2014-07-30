@@ -1,0 +1,12 @@
+<div class="myPost">
+  <p><%= @post.title%></p>
+  <p> Posted by: <%= @post.user.email %> </p>
+  <p> <%= @post.comments.count %> comments </p>
+  <p> <%= link_to 'Edit', edit_post_path(@post.id) if current_user.present? && @post.user_id == current_user.id %> </p>
+    <p> <%= link_to 'Delete', @post, :method => :delete, data: {confirm: "Are you sure you want to delete this post?"} if current_user.present? && @post.user_id == current_user.id %> </p>
+  <p> <%= image_tag(@post.image_url) %></p>
+  <p><%= @post.post%></p>
+  <%= render partial: 'comments/comment', locals: { post: @post } %>
+   
+</div>
+
