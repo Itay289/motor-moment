@@ -16,8 +16,9 @@
 
 <h2>Comments:</h2>
 
-<% post.comments.each do |comment| %>
-  <div class='commentShow'>
+<% post.comments.each_with_index do |comment,i| %>
+  <div class='commentShow'> 
+    <p><%= (i + 1).to_s + "." %></p>
     <p><%= comment.commenter %></p>
     <p><strong>Comment:</strong><%= comment.body %></p>
     <%= comment.created_at.strftime("%m/%d/%Y") %>
